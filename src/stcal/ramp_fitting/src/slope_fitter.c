@@ -7,7 +7,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#ifdef _WIN32
+// Windows-specific code here, or skip any Unix-specific code
+#else
 #include <sys/resource.h>
+#endif
 #include <time.h>
 #include <unistd.h>
 
