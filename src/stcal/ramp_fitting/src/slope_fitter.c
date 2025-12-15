@@ -7,13 +7,20 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+
 #ifdef _WIN32
 // Windows-specific code here, or skip any Unix-specific code
 #else
 #include <sys/resource.h>
 #endif
+
 #include <time.h>
+
+#ifdef _WIN32
+// Windows-specific code here, or skip any Unix-specific code
+#else
 #include <unistd.h>
+#endif
 
 #include <numpy/arrayobject.h>
 #include <numpy/npy_math.h>
